@@ -1,0 +1,286 @@
+/* STUDIO BELIFE - CSS ÚNICO */
+
+/* Variables */
+:root{
+  --bg: #f7dce2;
+  --text: #666;
+  --title: #1e1e1e;
+  --pink: #d98ca3;
+  --pink-soft: rgba(217, 140, 163, .10);
+  --white: #fff;
+  --border: rgba(0,0,0,.10);
+  --shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+/* Reset */
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+img{ max-width: 100%; display: block; }
+
+a{
+  color: var(--pink);
+  text-decoration: none;
+}
+a:hover{ opacity: .9; }
+
+h1,h2,h3,h4{
+  color: var(--title);
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+p{ margin: 0 0 14px; }
+
+/* HEADER */
+
+header{
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  padding: 20px 12px;
+  text-align: center;
+}
+
+.logo{
+  width: 140px;
+  margin: 0 auto 10px;
+}
+
+.title{
+  letter-spacing: 3px;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a{
+  color: var(--title);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+nav a:hover{
+  background: var(--pink-soft);
+}
+
+/* HOME */
+
+.home-info{
+  width: min(900px, 92%);
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.home-cta{
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 12px;
+  background: #111;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.btn:hover{ opacity: .92; }
+
+.home-block{
+  margin-top: 18px;
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.kicker{
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: rgba(0,0,0,.55);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+/* Chips */
+
+.chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chip{
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.12);
+  color: #111;
+  font-weight: 700;
+  background: rgba(0,0,0,.02);
+}
+
+/* Team */
+
+.team{
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.person{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+.avatar{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(231,168,187,.25);
+}
+
+/* Horarios */
+
+.hours{
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.hour{
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+.closed{ color: #c62828; }
+
+/* Cards */
+
+.cards{
+  width: min(1100px, 92%);
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card{
+  padding: 24px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.8);
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+  color: inherit;
+}
+
+.card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* SERVICIOS */
+
+.manicura, .barberia, .peluqueria, .galeria{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 30px 0 60px;
+}
+
+.Servicios{
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.Servicio{
+  background: rgba(255,255,255,0.85);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--pink);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+}
+
+.barberia .Servicio{ border-left-color: #1e1e1e; }
+.manicura .Servicio{ border-left-color: #e6a5b5; }
+.peluqueria .Servicio{ border-left-color: var(--pink); }
+
+/* GALERÍA */
+
+.galeria-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.galeria-grid img{
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+/* FOOTER */
+
+footer{
+  background: #111;
+  color: #fff;
+  padding: 30px 12px;
+  text-align: center;
+}
+
+.redes{
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px){
+  .cards{
+    grid-template-columns: 1fr;
+  }
+}
+
+
